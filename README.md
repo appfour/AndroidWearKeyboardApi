@@ -18,6 +18,14 @@ As soon as a keyboard app implements this API and is installed on the wearable d
 *	[Photo Gallery for Android Wear](https://play.google.com/store/apps/details?id=com.appfour.wearphotos)
 *	[Documents for Android Wear](https://play.google.com/store/apps/details?id=com.appfour.weardocuments)
 
+![Messages for Android Wear](https://github.com/appfour/AndroidWearKeyboardApi/blob/master/graphics/ic_launcher_messages.png)
+![Web Browser for Android Wear](https://github.com/appfour/AndroidWearKeyboardApi/blob/master/graphics/ic_launcher_wib.png)
+![Gmail Client for Android Wear](https://github.com/appfour/AndroidWearKeyboardApi/blob/master/graphics/ic_launcher_mail.png)
+![Calendar for Android Wear](https://github.com/appfour/AndroidWearKeyboardApi/blob/master/graphics/ic_launcher_calendar.png)
+![Video/YouTube for Android Wear](https://github.com/appfour/AndroidWearKeyboardApi/blob/master/graphics/ic_launcher_youtube.png)
+![Photo Gallery for Android Wear](https://github.com/appfour/AndroidWearKeyboardApi/blob/master/graphics/ic_launcher_photos.png)
+![Documents for Android Wear](https://github.com/appfour/AndroidWearKeyboardApi/blob/master/graphics/ic_launcher_documents.png)
+
 
 ##Implementing the API
 
