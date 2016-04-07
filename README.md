@@ -18,6 +18,8 @@ As soon as a keyboard app implements this API and is installed on the wearable d
 
 ##Implementing the API
 
+We provide a very basic [sample implementation](https://github.com/appfour/AndroidWearKeyboardApi/blob/master/WearKeyboard/wear/src/main/java/com/appfour/wearkeyboard/DemoKeyboardActivity.java) of the API. Implementation is straight forward:
+
 ###1. Declare a keyboard activity
 
 In the AndroidManifest.xml of your wearable (!) app declare an activity implementing the keyboard. This can be a full screen activity handling the input UI or a transparent activity if the keyboard only covers part of the screen.
