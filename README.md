@@ -5,6 +5,9 @@ Our apps for Android Wear offer an open API to integrate custom keyboard apps or
 * [TouchOne](https://play.google.com/store/apps/details?id=net.infiniti.touchone.touchone)
 * [FlickKey](http://flickkey.com/Link2FlickKeyForWearApp.html)
 
+![TouchOne](https://github.com/appfour/AndroidWearKeyboardApi/blob/master/graphics/touchone.jpg)
+![FlickKey](https://github.com/appfour/AndroidWearKeyboardApi/blob/master/graphics/flickkey.png)
+
 As soon as a keyboard app implements this API and is installed on the wearable device all appfour wear apps will use this keyboard app by default. Currently, these apps are:
 
 *	[Messages for Android Wear](https://play.google.com/store/apps/details?id=com.appfour.wearmessages)
