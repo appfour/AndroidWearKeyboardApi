@@ -1,6 +1,11 @@
 #appfour Android Wear open input method API
 
-Our apps for Android Wear offer an open API to integrate custom keyboard apps or other apps implementing alternative input methods. When your keyboard app implements this API and is installed on the wearable device all appfour wear apps will use your custom keyboard app by default:
+Our apps for Android Wear offer an open API to integrate custom keyboard apps or other apps implementing alternative input methods. Keyboards which are already implementing the API are:
+
+* [TouchOne](https://play.google.com/store/apps/details?id=net.infiniti.touchone.touchone)
+* [FlickKey](http://flickkey.com/Link2FlickKeyForWearApp.html)
+
+As soon as a keyboard app implements this API and is installed on the wearable device all appfour wear apps will use this keyboard app by default. Currently, these apps are:
 
 *	[Messages for Android Wear](https://play.google.com/store/apps/details?id=com.appfour.wearmessages)
 *	[Web Browser for Android Wear](https://play.google.com/store/apps/details?id=com.appfour.wearbrowser)
@@ -10,9 +15,10 @@ Our apps for Android Wear offer an open API to integrate custom keyboard apps or
 *	[Photo Gallery for Android Wear](https://play.google.com/store/apps/details?id=com.appfour.wearphotos)
 *	[Documents for Android Wear](https://play.google.com/store/apps/details?id=com.appfour.weardocuments)
 
-Integration is straight forward:
 
-##1. Declare a keyboard activity
+##Implementing the API
+
+###1. Declare a keyboard activity
 
 In the AndroidManifest.xml of your wearable (!) app declare an activity implementing the keyboard. This can be a full screen activity handling the input UI or a transparent activity if the keyboard only covers part of the screen.
 
@@ -27,7 +33,7 @@ In the AndroidManifest.xml of your wearable (!) app declare an activity implemen
 </activity>
 ```
 
-##2. Get data from the calling app
+###2. Get data from the calling app
 
 In the activity implementation get the data from the calling app. The calling app sends the original edited text, current selection, input type, action and hint text: 
 
@@ -50,7 +56,7 @@ The action extra is a combination of android.view.inputmethod.EditorInfo constan
 
 The token extra is to make sure that no app we haven't called can send texts to our apps. It is passed by the calling intent and verified when returned. So just pass it along when sending back a broadcast.
 
-##3. Send text updates when the user types
+###3. Send text updates when the user types
 
 Finally return the edited text and new selection to the calling app. This can be done incrementally while typing (useful for transparent activities) or when the user finishes the text input:
 
@@ -65,7 +71,7 @@ data.putExtra("SelectionEnd", typedText.length());
 sendBroadcast(data);
 ```
 
-##4. Optionally perform the keyboard action
+###4. Optionally perform the keyboard action
 
 When the action extra specifies an action other than `IME_ACTION_NONE`, you can optionally provide a way to invoke that action. For example, the messages app passes `IME_ACTION_SEND` for new messages. Your keyboard can then contain a “Send” button that performs the action directly, so the user doesn’t have to press the send button of the calling app. To perform the action, you have to pass the extra PerformAction when finishing the keyboard activity:
 
@@ -75,5 +81,3 @@ data.putExtra("PerformAction", true);
 setResult(RESULT_OK, data);
 finish();
 ```
-
-
